@@ -1,6 +1,6 @@
-# Contributing to terraform-aws-lambda-multi-scheduler-stop-start
+# Contributing to terraform-aws-lambda-multi-schedulers-stop-start
 
-We would love for you to contribute to terraform-aws-lambda-multi-scheduler-stop-start and help make it even better than it is today!
+We would love for you to contribute to terraform-aws-lambda-multi-schedulers-stop-start and help make it even better than it is today!
 As a contributor, here are the guidelines we would like you to follow:
 
  - [Coding Rules](#rules)
