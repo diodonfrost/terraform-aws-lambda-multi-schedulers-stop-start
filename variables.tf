@@ -4,6 +4,7 @@ variable "schedulers" {
     name                         = string
     schedule_expression          = optional(string, "cron(0 22 ? * MON-FRI *)")
     schedule_expression_timezone = optional(string, "UTC")
+    scheduler_excluded_dates     = optional(list(string), [])
     custom_iam_role_arn          = optional(string, null)
     kms_key_arn                  = optional(string, null)
     aws_regions                  = optional(list(string), null)

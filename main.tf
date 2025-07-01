@@ -3,11 +3,12 @@ data "aws_region" "current" {}
 module "scheduler" {
   for_each = var.schedulers
   source   = "diodonfrost/lambda-scheduler-stop-start/aws"
-  version  = "4.1.0"
+  version  = "4.2.0"
 
   name                            = each.value.name
   schedule_expression             = each.value.schedule_expression
   schedule_expression_timezone    = each.value.schedule_expression_timezone
+  scheduler_excluded_dates        = each.value.scheduler_excluded_dates
   custom_iam_role_arn             = each.value.custom_iam_role_arn
   kms_key_arn                     = each.value.kms_key_arn
   aws_regions                     = each.value.aws_regions == null ? [data.aws_region.current.name] : each.value.aws_regions
