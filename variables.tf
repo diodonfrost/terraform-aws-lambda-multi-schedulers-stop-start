@@ -25,6 +25,7 @@ variable "schedulers" {
     cloudwatch_alarm_schedule       = optional(bool, false)
     transfer_schedule               = optional(bool, false)
     apprunner_schedule              = optional(bool, false)
+    dry_run                         = optional(bool, false)
     tags                            = optional(map(any), null)
   }))
   default = {}

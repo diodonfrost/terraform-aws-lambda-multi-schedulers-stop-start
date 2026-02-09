@@ -3,7 +3,7 @@ data "aws_region" "current" {}
 module "scheduler" {
   for_each = var.schedulers
   source   = "diodonfrost/lambda-scheduler-stop-start/aws"
-  version  = "4.4.0"
+  version  = "4.5.0"
 
   name                            = each.value.name
   schedule_expression             = each.value.schedule_expression
@@ -26,5 +26,6 @@ module "scheduler" {
   cloudwatch_alarm_schedule       = each.value.cloudwatch_alarm_schedule
   transfer_schedule               = each.value.transfer_schedule
   apprunner_schedule              = each.value.apprunner_schedule
+  dry_run                         = each.value.dry_run
   tags                            = each.value.tags
 }
